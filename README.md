@@ -25,8 +25,8 @@ On my machine with a local SSD, I got the following results:
 |pbf.gz|5.755|18|
 |avro|4.665|276|
 
-In general, the overhead of gzip-compression is pretty obvious in these results,
-while the overhead of the lz4-compression is much smaller.
+In general, the overhead of gzip-compression is pretty obvious in these results.
+Lz4 compression is so fast, it is able to compensate the overhead by writing smaller files, resulting in faster operations when using lz4 than without.
 
 Kryo is a kind of drop-in replacement for java serialization, very easy to use, but not
 that great in performance or filesize.
